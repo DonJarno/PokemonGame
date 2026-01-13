@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpkqw5hofa0xu"]
+[gd_scene load_steps=4 format=3 uid="uid://dpkqw5hofa0xu"]
 
 [ext_resource type="Texture2D" uid="uid://cso1gdx2ehicj" path="res://Assets/House.png" id="1_hfkix"]
+[ext_resource type="PackedScene" uid="uid://cs0v56linq7b" path="res://door_teleport.tscn" id="2_metfq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_metfq"]
 size = Vector2(64, 64)
@@ -16,3 +17,6 @@ offset = Vector2(8, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(40, 32)
 shape = SubResource("RectangleShape2D_metfq")
+
+[node name="DoorTeleport" parent="." instance=ExtResource("2_metfq")]
+position = Vector2(32, 48)

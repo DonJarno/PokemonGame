@@ -4,8 +4,9 @@ const TILE_SIZE := 16.0
 const MOVE_COOLDOWN := 0.2
 const MOVE_SPEED := 20.0
 
-@onready var animations: AnimationPlayer = $AnimationPlayer
 
+@onready var animations: AnimationPlayer = $AnimationPlayer
+	
 var move_timer := 0.0
 var last_dir := Vector2.DOWN
 
@@ -15,6 +16,7 @@ var distance_moved := 0.0
 
 
 func _physics_process(delta: float) -> void:
+	$Sprite2D.visible = true
 	if moving:
 		_continue_move(delta)
 		return
@@ -51,7 +53,7 @@ func _handle_input() -> void:
 	distance_moved = 0.0
 	moving = true
 	move_timer = MOVE_COOLDOWN
-
+	
 
 func _continue_move(delta: float) -> void:
 	var step := MOVE_SPEED * delta
