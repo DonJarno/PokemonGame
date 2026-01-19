@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cybyxhka4kga1"]
+
+[ext_resource type="Texture2D" uid="uid://c55fvlu6k3vd6" path="res://Assets/player_home_floor_1.png" id="1_vpo2d"]
+[ext_resource type="Texture2D" uid="uid://cyk7x1qh8jagn" path="res://Assets/mat.png" id="2_dsgjr"]
+
+[node name="PlayerHouse" type="Node2D"]
+
+[node name="PlayerHomeFloor1" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_vpo2d")
+centered = false
+
+[node name="Mat" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(80, 128)
+texture = ExtResource("2_dsgjr")
+centered = false
+offset = Vector2(8, 0)

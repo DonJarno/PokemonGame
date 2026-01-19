@@ -1,91 +1,54 @@
 extends CharacterBody2D
 
 const TILE_SIZE := 16.0
-const MOVE_COOLDOWN := 0.2
-const MOVE_SPEED := 20.0
-
+var last_direction
+var input_direction
+var moving = false
 
 @onready var animations: AnimationPlayer = $AnimationPlayer
-	
-var move_timer := 0.0
-var last_dir := Vector2.DOWN
-
-var moving := false
-var move_dir := Vector2.ZERO
-var distance_moved := 0.0
-
 
 func _physics_process(delta: float) -> void:
-	$Sprite2D.visible = true
-	if moving:
-		_continue_move(delta)
-		return
-
-	move_timer -= delta
-	if move_timer > 0:
-		return
-
-	_handle_input()
-
-
-func _handle_input() -> void:
-	var dir := Vector2.ZERO
-
+	input_direction = Vector2.ZERO
 	if Input.is_action_pressed("ui_up"):
-		dir = Vector2.UP
+		input_direction = Vector2(0,-1)
+		last_direction = input_direction
+		move() 
 		animations.play("walk_up")
 	elif Input.is_action_pressed("ui_down"):
-		dir = Vector2.DOWN
+		input_direction = Vector2(0,1)
+		last_direction = input_direction
+		move()
 		animations.play("walk_down")
 	elif Input.is_action_pressed("ui_left"):
-		dir = Vector2.LEFT
+		input_direction = Vector2(-1,0)
+		last_direction = input_direction
+		move()
 		animations.play("walk_left")
 	elif Input.is_action_pressed("ui_right"):
-		dir = Vector2.RIGHT
+		input_direction = Vector2(1,0)
+		last_direction = input_direction
+		move()
 		animations.play("walk_right")
+	move_and_slide()
 
-	if dir == Vector2.ZERO:
-		_play_idle()
-		return
-
-	last_dir = dir
-	move_dir = dir
-	distance_moved = 0.0
-	moving = true
-	move_timer = MOVE_COOLDOWN
+func move():
+	if input_direction:
+		if moving == false:
+			moving = true
+			var tween = create_tween()
+			tween.tween_property(self, "position", position + input_direction*TILE_SIZE, 0.35)
+			tween.tween_callback(move_false)
 	
-
-func _continue_move(delta: float) -> void:
-	var step := MOVE_SPEED * delta
-	var remaining := TILE_SIZE - distance_moved
-	step = min(step, remaining)
-
-	var collision := move_and_collide(move_dir * step)
-	if collision:
-		moving = false
-		_snap_to_grid()
-		_play_idle()
-		return
-
-	distance_moved += step
-
-	if distance_moved >= TILE_SIZE:
-		moving = false
-		_snap_to_grid()
-		_play_idle()
-
-
-func _snap_to_grid() -> void:
-	global_position = global_position.snapped(Vector2(TILE_SIZE, TILE_SIZE))
-
-
-func _play_idle() -> void:
-	match last_dir:
-		Vector2.UP:
-			animations.play("idle_up")
-		Vector2.DOWN:
-			animations.play("idle_down")
-		Vector2.LEFT:
-			animations.play("idle_left")
-		Vector2.RIGHT:
-			animations.play("idle_right")
+func move_false():
+	moving = false
+	play_idle()
+	
+func play_idle():
+	if last_direction == Vector2.UP:
+		animations.play("idle_up")
+	elif last_direction == Vector2.DOWN:
+		animations.play("idle_down")
+	elif last_direction == Vector2.LEFT:
+		animations.play("idle_left")
+	elif last_direction == Vector2.RIGHT:
+		animations.play("idle_right")

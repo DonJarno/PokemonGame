@@ -24,10 +24,6 @@ window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 
-[global_group]
-
-Player=""
-
 [layer_names]
 
 2d_physics/layer_2="door"

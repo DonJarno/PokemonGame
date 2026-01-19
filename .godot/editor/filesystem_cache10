@@ -1,21 +1,21 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1768317150
-barriertree.tscn::PackedScene::3411860735637259076::1768225170::0::1::::<><><>0<>0<><>::uid://dr3otd36kxdqi::::res://Assets/tree1.png
-door_teleport.gd::GDScript::3898233090050012343::1768308767::0::1::::<>Area2D<><>0<>0<><>::
-door_teleport.tscn::PackedScene::179093537440757257::1768309006::0::1::::<><><>0<>0<><>::uid://bvsllg34ouurf::::res://door_teleport.gd
-house.tscn::PackedScene::8233750829697500374::1768309195::0::1::::<><><>0<>0<><>::uid://cso1gdx2ehicj::::res://Assets/House.png<>uid://cs0v56linq7b::::res://door_teleport.tscn
+::res://::1768815600
+barriertree.tscn::PackedScene::3411860735637259076::1768466279::0::1::::<><><>0<>0<><>::uid://dr3otd36kxdqi::::res://Assets/tree1.png
+house.tscn::PackedScene::8233750829697500374::1768392236::0::1::::<><><>0<>0<><>::uid://cso1gdx2ehicj::::res://Assets/House.png
 icon.svg::CompressedTexture2D::6390805018569710462::1767872559::1767872614::1::::<><><>0<>0<>195f0f49e6d9b039a653f8ee918a30c6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-player.gd::GDScript::5074534491497541430::1768308627::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::3694457639987396094::1768308878::0::1::::<><><>0<>0<><>::uid://gi6xofkssqcq::::res://Assets/Male_Spritesheet.png<>uid://ceke3u8ig4qwc::::res://player.gd
-town.tscn::PackedScene::1328029603428439167::1768309072::0::1::::<><><>0<>0<><>::uid://bsvvgbi7ummmw::::res://player.tscn<>uid://l5w2w20m6cwu::::res://world_map.tscn<>uid://bcli5d6c43h40::::res://tree.tscn<>uid://cs0v56linq7b::::res://door_teleport.tscn<>uid://dpkqw5hofa0xu::::res://house.tscn<>uid://bouy33dm56wrs::::res://barriertree.tscn
+player.gd::GDScript::5074534491497541430::1768467379::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::3694457639987396094::1768391403::0::1::::<><><>0<>0<><>::uid://gi6xofkssqcq::::res://Assets/Male_Spritesheet.png<>uid://ceke3u8ig4qwc::::res://player.gd
+PlayerHouse.tscn::PackedScene::6460936656689895762::1768398700::0::1::::<><><>0<>0<><>::uid://c55fvlu6k3vd6::::res://Assets/player_home_floor_1.png<>uid://cyk7x1qh8jagn::::res://Assets/mat.png
+town.tscn::PackedScene::1328029603428439167::1768479200::0::1::::<><><>0<>0<><>::uid://bsvvgbi7ummmw::::res://player.tscn<>uid://l5w2w20m6cwu::::res://world_map.tscn<>uid://ch3l7tqo4brul::::res://Assets/Grass.png<>uid://dai3uvidy7prg::::res://Assets/Ledge Water.png<>uid://bcli5d6c43h40::::res://tree.tscn<>uid://dpkqw5hofa0xu::::res://house.tscn<>uid://bouy33dm56wrs::::res://barriertree.tscn
 tree.tscn::PackedScene::2550046041612823487::1767876689::0::1::::<><><>0<>0<><>::uid://c7lcvk1m4rou3::::res://Assets/tree.png
 world_map.tscn::PackedScene::835393801293009440::1768304850::0::1::::<><><>0<>0<><>::uid://oqr5dhhx1hl8::::res://Assets/Flower.png<>uid://ekhke55834k0::::res://Assets/grass1_tileset.png<>uid://dt45jn3dy1l77::::res://Assets/BeachTileset.png
-::res://Assets/::1768296021
+::res://Assets/::1768473541
 BeachTileset.png::CompressedTexture2D::8554555343225279548::1767988986::1767989029::1::::<><><>0<>0<>0377d7547d7d69d5596d256cd12171d8<>res://.godot/imported/BeachTileset.png-cbb0234475370504460193412051470e.ctex::
 Flower.png::CompressedTexture2D::1016759786425082003::1767867647::1767873464::1::::<><><>0<>0<>8a9396e765d160842df126ecbdebeb06<>res://.godot/imported/Flower.png-9939f107c9beea820d051f8075d02ea8.ctex::
 grass1_tileset.png::CompressedTexture2D::301842286826970769::1767873245::1767873260::1::::<><><>0<>0<>d6badb1f479b18bfeffb0b7fbd523b19<>res://.godot/imported/grass1_tileset.png-7e8b94ae7e3c73fb552b45d32a3d5c9a.ctex::
 Grass.png::CompressedTexture2D::5322691905626923023::1767865349::1767873464::1::::<><><>0<>0<>e57dea680916a0051865bdbc6df9c7fd<>res://.godot/imported/Grass.png-09595ac432dada4320fe75d2e4264f41.ctex::
 House.png::CompressedTexture2D::6066731392335917573::1767863132::1767873464::1::::<><><>0<>0<>98b5e4472192e91db7df4c3aa0518403<>res://.godot/imported/House.png-f6a3be40dda3704a6798723cf9afa2e3.ctex::
+Ledge Water.png::CompressedTexture2D::7177513980305782628::1768473459::1768473541::1::::<><><>0<>0<>34be863d65ff3dfb56a8857693eb9d1d<>res://.godot/imported/Ledge Water.png-afe859a86be69431a39d17cbfe9a33cf.ctex::
 Male_Spritesheet.png::CompressedTexture2D::439572127426303940::1767873245::1767873260::1::::<><><>0<>0<>d3c9f4b5f9771c1580580fb29e88e015<>res://.godot/imported/Male_Spritesheet.png-b50f3a089289ef8faab3c47524215809.ctex::
 mat.png::CompressedTexture2D::6480002799954391953::1768295974::1768296021::1::::<><><>0<>0<>daae05b4a258033fba711ebe29641584<>res://.godot/imported/mat.png-559a784c7bcaeaefa5de0072fb473bd8.ctex::
 player_home_floor_1.png::CompressedTexture2D::6940779705860728377::1768295986::1768296021::1::::<><><>0<>0<>343a38fcdef599b65aa70b6a18468823<>res://.godot/imported/player_home_floor_1.png-653f7b1d300c1cd837ada5a602876d44.ctex::
